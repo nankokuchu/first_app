@@ -1,0 +1,15 @@
+<h1>これはトップページです</h1>
+
+<%= link_to '新規投稿', '/posts/new', method: :get %>
+
+<% @posts.each do |a| %>
+  <div class="post">
+    <div class="post-date">
+      投稿日時：<%= a.created_at %>
+    </div>
+    <div class="post-content">
+      <%= a.content %>
+      </div>
+ </div>
+<% end %>
+
